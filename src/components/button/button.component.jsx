@@ -15,7 +15,6 @@ const getButton = (buttonType = BUTTON_TYPE_CLASSES.base) =>
 
 const Button = ({children, buttonType, isLoading = false, ...otherProps}) => {
   const CustomButton = getButton(buttonType);
-  console.log(CustomButton, 'CustomButton');
   return (
     <CustomButton disabled={isLoading} {...otherProps}>
       {isLoading ? <LoadingSpinner /> : children}
